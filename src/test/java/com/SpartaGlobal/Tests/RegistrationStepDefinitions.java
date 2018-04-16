@@ -46,8 +46,8 @@ public class RegistrationStepDefinitions {
 
     @When("^User entails valid details$")
     public void user_entails_valid_details() throws Throwable {
-        registration.fillInEmail("Bobfakejames@gmail.com");
-        registration.fillInFirstNameField("Mikey");
+        registration.fillInEmail("Bobfakejblame@gmail.com");
+        registration.fillInFirstNameField("Migey");
         registration.fillInLastNameField("Fake");
         registration.fillInPasswordField("Password@1234");
         registration.setbDaySelect(1);
@@ -67,6 +67,69 @@ public class RegistrationStepDefinitions {
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "http://www.asos.com/bag?nlid=nav%20header" );
         Thread.sleep(4000);
+    }
+
+    @When("^User enters valid FirstName$")
+    public void user_enters_valid_FirstName() throws Throwable {
+        registration.fillInFirstNameField("Christian");
+
+    }
+
+    @When("^User enters valid LastName$")
+    public void user_enters_valid_LastName() throws Throwable {
+        registration.fillInLastNameField("Bryant");
+    }
+
+    @When("^User enters valid Password$")
+    public void user_enters_valid_Password() throws Throwable {
+        registration.fillInPasswordField("Password@1234");
+    }
+
+    @When("^User selects valid DOB$")
+    public void user_selects_valid_DOB() throws Throwable {
+        registration.setbDaySelect(1);
+        registration.setbMonthSelect(1);
+        registration.setbYearSelect(10);
+    }
+
+    @When("^User selects Gender$")
+    public void user_selects_Gender() throws Throwable {
+        registration.clickMaleBtn();
+    }
+
+    @Then("^User receive's no email error message$")
+    public void user_receive_s_no_email_error_message() throws Throwable {
+        assertEquals("Oops! You need to type your email here", registration.emailErrorMessage());
+    }
+
+    @When("^User enters email in invalid format$")
+    public void user_enters_email_in_invalid_format() throws Throwable {
+        registration.fillInEmail("Invalid");
+    }
+
+    @Then("^User receive's invalid format email error message$")
+    public void user_receive_s_invalid_format_email_error_message() throws Throwable {
+        assertEquals("Email fail! Please type in your correct email address", registration.emailErrorMessage());
+    }
+
+    @When("^User enters email which has already been used$")
+    public void user_enters_email_which_has_already_been_used() throws Throwable {
+        registration.fillInEmail("cbryant1993@gmail.com");
+    }
+
+    @Then("^User receive's already registered email error message$")
+    public void user_receive_s_already_registered_email_error_message() throws Throwable {
+        assertEquals("The email address has already been allocated to another customer", registration.rEmailMessage());
+    }
+
+    @When("^User enters email which is more than 100 characters$")
+    public void user_enters_email_which_is_more_than_characters() throws Throwable {
+        registration.fillInEmail("sabusahbcusacbasucbsaucbsauhbcuasbcuahsbcuhasbcuahsbcuashbcuhasbcuhasbcuahsbcuhasbcuahsbcuahsbcuahsbcuhsab@hotmail.com");
+    }
+
+    @Then("^User receive's email is too long email error message$")
+    public void user_receive_s_email_is_too_long_email_error_message() throws Throwable {
+        assertEquals("Name must not exceed 100 characters", registration.rEmailMessage());
     }
 
 

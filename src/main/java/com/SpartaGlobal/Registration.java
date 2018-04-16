@@ -37,6 +37,12 @@ public class Registration extends ASOSSite {
     @FindBy(id = "register")
     WebElement registerBtn;
 
+    @FindBy(id = "Email-error")
+    WebElement emailError;
+
+    @FindBy(xpath = "//*[@id=\"main\"]/div[1]/div[2]/form/fieldset/div[1]/div[1]/span")
+    WebElement rEmailError;
+
     public Registration(WebDriver driver){
         super(driver);
     }
@@ -84,5 +90,11 @@ public class Registration extends ASOSSite {
         registerBtn.click();
     }
 
+    public String emailErrorMessage(){
+        return emailError.getText();
+    }
 
+    public String rEmailMessage(){
+        return rEmailError.getText();
+    }
 }
