@@ -46,7 +46,7 @@ public class RegistrationStepDefinitions {
 
     @When("^User entails valid details$")
     public void user_entails_valid_details() throws Throwable {
-        registration.fillInEmail("Bobfakejblame@gmail.com");
+        registration.fillInEmail("Bobfakejfakey@gmail.com");
         registration.fillInFirstNameField("Migey");
         registration.fillInLastNameField("Fake");
         registration.fillInPasswordField("Password@1234");
@@ -66,7 +66,6 @@ public class RegistrationStepDefinitions {
     public void user_is_taken_to_ITEM_BAG_page() throws Throwable {
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "http://www.asos.com/bag?nlid=nav%20header" );
-        Thread.sleep(4000);
     }
 
     @When("^User enters valid FirstName$")
@@ -129,8 +128,47 @@ public class RegistrationStepDefinitions {
 
     @Then("^User receive's email is too long email error message$")
     public void user_receive_s_email_is_too_long_email_error_message() throws Throwable {
+        Thread.sleep(4000);
         assertEquals("Name must not exceed 100 characters", registration.rEmailMessage());
     }
+
+    @Then("^User receive's no firstname error message$")
+    public void user_receive_s_no_firstname_error_message() throws Throwable {
+        assertEquals("We need your first name – it’s nicer that way", registration.noFirstNameErrorMessage());
+    }
+
+    @Then("^User receive's no lastname error message$")
+    public void user_receive_s_no_lastname_error_message() throws Throwable {
+        assertEquals("Last name, too, please!", registration.noLastNameErrorMessage());
+    }
+
+    @Then("^User receive's no password error message$")
+    public void user_receive_s_no_password_error_message() throws Throwable {
+        assertEquals("Hey, we need a password here", registration.noPasswordErrorMessage());
+    }
+
+    @When("^User enters an invalid password$")
+    public void user_enters_an_invalid_password() throws Throwable {
+        registration.fillInPasswordField("Pass");
+    }
+
+    @Then("^User receive's invalid password error message$")
+    public void user_receive_s_invalid_password_error_message() throws Throwable {
+        assertEquals("At least 6 letters and 1 number, please!", registration.invalidPasswordErrorMessage());
+    }
+
+    @When("^User selects invalid DOB$")
+    public void user_selects_invalid_DOB() throws Throwable {
+        registration.setbDaySelect(6);
+        registration.setbMonthSelect(6);
+        registration.setbYearSelect(1);
+    }
+
+    @Then("^User receive's invalid DOB error message$")
+    public void user_receive_s_invalid_DOB_error_message() throws Throwable {
+        assertEquals("Oops. Looks like you're too young to use ASOS.", registration.invalidDOBErrorMessage());
+    }
+
 
 
     @After

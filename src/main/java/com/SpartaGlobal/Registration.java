@@ -43,6 +43,21 @@ public class Registration extends ASOSSite {
     @FindBy(xpath = "//*[@id=\"main\"]/div[1]/div[2]/form/fieldset/div[1]/div[1]/span")
     WebElement rEmailError;
 
+    @FindBy(xpath = "//*[@id=\"FirstName-error\"]")
+    WebElement noFirstNameError;
+
+    @FindBy(xpath = "//*[@id=\"LastName-error\"]")
+    WebElement noLastNameError;
+
+    @FindBy(xpath = "//*[@id=\"Password-error\"]")
+    WebElement noPasswordError;
+
+    @FindBy(xpath = "//*[@id=\"Password-error\"]")
+    WebElement invalidPasswordError;
+
+    @FindBy(xpath = "//*[@id=\"BirthDay-error\"]")
+    WebElement invalidDOB;
+
     public Registration(WebDriver driver){
         super(driver);
     }
@@ -91,10 +106,30 @@ public class Registration extends ASOSSite {
     }
 
     public String emailErrorMessage(){
-        return emailError.getText();
+       return emailError.getText();
     }
 
     public String rEmailMessage(){
         return rEmailError.getText();
+    }
+
+    public String noFirstNameErrorMessage(){
+        return noFirstNameError.getText();
+    }
+
+    public String noLastNameErrorMessage(){
+        return noLastNameError.getText();
+    }
+
+    public String noPasswordErrorMessage(){
+        return noPasswordError.getText();
+    }
+
+    public String invalidPasswordErrorMessage(){
+        return invalidPasswordError.getText();
+    }
+
+    public String invalidDOBErrorMessage(){
+        return invalidDOB.getText();
     }
 }

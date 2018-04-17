@@ -59,3 +59,63 @@ Feature: ASOS register
     When User clicks the JOIN ASOS button
     Then User receive's email is too long email error message
 
+  Scenario: User tries to register no Firstname
+    Given User is on the ASOS home page
+    When User clicks on the account icon
+    When User clicks on the JOIN link
+    And User enters email which is more than 100 characters
+    And User enters valid LastName
+    And User enters valid Password
+    And User selects valid DOB
+    And User selects Gender
+    When User clicks the JOIN ASOS button
+    Then User receive's no firstname error message
+
+  Scenario: User tries to register no Lastname
+    Given User is on the ASOS home page
+    When User clicks on the account icon
+    When User clicks on the JOIN link
+    And User enters email which is more than 100 characters
+    And User enters valid Password
+    And User selects valid DOB
+    And User selects Gender
+    When User clicks the JOIN ASOS button
+    Then User receive's no lastname error message
+
+  Scenario: User tries to register no Password
+    Given User is on the ASOS home page
+    When User clicks on the account icon
+    When User clicks on the JOIN link
+    And User enters email which is more than 100 characters
+    And User selects valid DOB
+    And User selects Gender
+    When User clicks the JOIN ASOS button
+    Then User receive's no password error message
+
+
+  Scenario: User tries to register Password which is invalid
+    Given User is on the ASOS home page
+    When User clicks on the account icon
+    When User clicks on the JOIN link
+    And User enters email which is more than 100 characters
+    And User enters valid FirstName
+    And User enters valid LastName
+    And User enters an invalid password
+    And User selects valid DOB
+    And User selects Gender
+    When User clicks the JOIN ASOS button
+    Then User receive's invalid password error message
+
+  Scenario: User trying to register is too young
+    Given User is on the ASOS home page
+    When User clicks on the account icon
+    When User clicks on the JOIN link
+    And User enters email which is more than 100 characters
+    And User enters valid FirstName
+    And User enters valid LastName
+    And User enters valid Password
+    And User selects invalid DOB
+    And User selects Gender
+    When User clicks the JOIN ASOS button
+    Then User receive's invalid DOB error message
+
