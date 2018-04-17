@@ -16,11 +16,8 @@ public abstract class ASOSSite {
         HomePage homePage = new HomePage(driver);
     }
 
-//    public void loginPage() {
-//        LoginPage loginPage = new LoginPage(driver);
-//    }
-//
-//    public void myAccountPage() {
-//        MyAccountPage myAccountPage = new MyAccountPage(driver);
-//    }
+    public void loginPage() {
+        LoginPage loginPage = new LoginPage(driver);
+    }
+
 }
