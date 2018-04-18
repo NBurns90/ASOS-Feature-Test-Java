@@ -6,7 +6,7 @@ Feature: ASOS register
     And I click on the JOIN link
     And I enter valid details
     When I click the JOIN ASOS button
-    Then I am taken to ITEM BAG page
+    Then I am taken to Home page
 
   Scenario: User trys to register with no email
     Given I am on the ASOS home page

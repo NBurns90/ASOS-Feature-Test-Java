@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b55f7c5-f9b9-4a48-bbae-f8f9ab696124" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Features/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Features/login.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Features/registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Features/registration.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/SpartaGlobal/Tests/RegistrationStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/SpartaGlobal/Tests/RegistrationStepDefinitions.java" afterDir="false" />
     </list>
@@ -33,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registration.feature" pinned="false" current-in-tab="true">
+      <file leaf-file-name="registration.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Features/registration.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="1215">
+              <caret line="81" column="35" lean-forward="true" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -51,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistrationStepDefinitions.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RegistrationStepDefinitions.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/SpartaGlobal/Tests/RegistrationStepDefinitions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2017">
-              <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+            <state relative-caret-position="84">
+              <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -63,7 +61,7 @@
       <file leaf-file-name="Registration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/SpartaGlobal/Registration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
+            <state relative-caret-position="1500">
               <caret line="132" column="36" selection-start-line="132" selection-start-column="36" selection-end-line="132" selection-end-column="36" />
             </state>
           </provider>
@@ -108,8 +106,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Features/registration.feature" />
         <option value="$PROJECT_DIR$/Features/login.feature" />
+        <option value="$PROJECT_DIR$/Features/registration.feature" />
         <option value="$PROJECT_DIR$/src/test/java/com/SpartaGlobal/Tests/RegistrationStepDefinitions.java" />
       </list>
     </option>
@@ -121,9 +119,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="2" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="813" />
+    <option name="width" value="1438" />
+    <option name="height" value="770" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -324,18 +323,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CucumberRunner - 2018.04.18 at 11h 01m 50s.xml">
-      <configuration name="CucumberRunner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CucumberRunner - 2018.04.18 at 11h 04m 00s.xml">
-      <configuration name="CucumberRunner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CucumberRunner - 2018.04.18 at 11h 06m 38s.xml">
-      <configuration name="CucumberRunner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CucumberRunner - 2018.04.18 at 11h 09m 09s.xml">
-      <configuration name="CucumberRunner" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CucumberRunner - 2018.04.18 at 11h 10m 20s.xml">
       <configuration name="CucumberRunner" configurationId="JUnit" />
     </history-entry>
@@ -354,9 +341,21 @@
     <history-entry file="CucumberRunner - 2018.04.18 at 16h 40m 05s.xml">
       <configuration name="CucumberRunner" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CucumberRunner - 2018.04.18 at 16h 54m 45s.xml">
+      <configuration name="CucumberRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CucumberRunner - 2018.04.18 at 16h 58m 21s.xml">
+      <configuration name="CucumberRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CucumberRunner - 2018.04.18 at 17h 00m 08s.xml">
+      <configuration name="CucumberRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CucumberRunner - 2018.04.18 at 17h 03m 51s.xml">
+      <configuration name="CucumberRunner" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3314000" />
+    <option name="totallyTimeSpent" value="4695000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1438" height="770" extended-state="0" />
@@ -371,7 +370,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33878157" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.49034175" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32986626" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32838038" />
       <window_info id="Capture Tool" order="2" />
@@ -776,13 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/SpartaGlobal/Registration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="132" column="36" selection-start-line="132" selection-start-column="36" selection-end-line="132" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Features/login.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -790,17 +782,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/SpartaGlobal/Tests/RegistrationStepDefinitions.java">
+    <entry file="file://$PROJECT_DIR$/Features/registration.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2017">
-          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+        <state relative-caret-position="1215">
+          <caret line="81" column="35" lean-forward="true" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Features/registration.feature">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/SpartaGlobal/Registration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="1500">
+          <caret line="132" column="36" selection-start-line="132" selection-start-column="36" selection-end-line="132" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/SpartaGlobal/Tests/RegistrationStepDefinitions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
         </state>
       </provider>
     </entry>
