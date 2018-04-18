@@ -29,13 +29,13 @@ public class RegistrationStepDefinitions {
         registration = new Registration(driver);
     }
 
-    @Given("^User is on the ASOS home page$")
+    @Given("^I am on the ASOS home page$")
     public void user_is_on_the_ASOS_home_page() throws Throwable {
         driver.get("http://www.asos.com");
     }
 
-    @When("^User clicks on the account icon$")
-    public void user_clicks_on_the_account_icon() throws Throwable {
+    @When("^I click on the account icon$")
+    public void I_click_on_the_account_icon() throws Throwable {
         homePage.clickAccountButton();
     }
 

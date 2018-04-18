@@ -13,9 +13,6 @@ public class HomePage extends ASOSSite {
     @FindBy(linkText = "Join")
     WebElement joinLink;
 
-    @FindBy(linkText = "My Account")
-    WebElement signInLink;
-
     public HomePage(WebDriver driver)
     {
         super(driver);
@@ -31,7 +28,7 @@ public class HomePage extends ASOSSite {
     }
 
     public void clickSignInLink(){
-        signInLink.click();
+        joinLink.click();
     }
 
     public void checkForSignOutLink() {

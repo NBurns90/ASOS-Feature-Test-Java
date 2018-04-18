@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends ASOSSite {
 
-    @FindBy(id = "Username")
+    @FindBy(id = "EmailAddress")
     WebElement Email;
 
     @FindBy(id = "Password")
@@ -14,6 +14,15 @@ public class LoginPage extends ASOSSite {
 
     @FindBy(id = "signin")
     WebElement signIn;
+
+    @FindBy(linkText = "Sign out")
+    WebElement signOut;
+
+    @FindBy(id = "EmailAddress-error")
+    WebElement emailErrorMessage;
+
+    @FindBy(id = "Password-error")
+    WebElement passwordErrorMessage;
 
     public LoginPage(WebDriver driver)
     {
@@ -25,11 +34,23 @@ public class LoginPage extends ASOSSite {
     }
 
     public void fillInPassword (String password) {
-        Email.sendKeys(password);
+        Password.sendKeys(password);
     }
 
     public void clickSignInButton() {
+        signIn.click();
+    }
 
+    public String checkForSignOut() {
+        return signOut.getText();
+    }
+
+    public String checkForEmailErrorMessage() {
+        return emailErrorMessage.getText();
+    }
+
+    public String checkForPasswordErrorMessage() {
+        return passwordErrorMessage.getText();
     }
 
 }
