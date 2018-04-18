@@ -6,8 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends ASOSSite {
 
-//    @FindBy
-
     public HomePage(WebDriver driver)
     {
         super(driver);
