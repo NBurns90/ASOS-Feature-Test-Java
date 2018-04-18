@@ -41,10 +41,17 @@ We have proposed that we test 2 high risk features on the ASOS website.  The Log
 
 ### Registration
 1. Valid Registration
-  * Valid details which can result in a valid registration
+      * Valid details which can result in a valid registration
 2. Invalid Validation within:
-  * Email
-  * First
-  * Last Name
-  * Password
-  * Date of Birth
+      * Email
+      * First
+      * Last Name
+      * Password
+      * Date of Birth
+      
+### Login
+1. Valid Login
+      * Valid details which can result in a valid login
+2. Invalid Login within boundaries of:
+      * Email
+      * Password
