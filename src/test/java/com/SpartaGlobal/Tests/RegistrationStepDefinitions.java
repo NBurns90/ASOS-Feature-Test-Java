@@ -29,24 +29,24 @@ public class RegistrationStepDefinitions {
         registration = new Registration(driver);
     }
 
-    @Given("^User is on the ASOS home page$")
+    @Given("^I am on the ASOS home page$")
     public void user_is_on_the_ASOS_home_page() throws Throwable {
         driver.get("http://www.asos.com");
     }
 
-    @When("^User clicks on the account icon$")
+    @When("^I click on the account icon$")
     public void user_clicks_on_the_account_icon() throws Throwable {
         homePage.clickAccountButton();
     }
 
-    @When("^User clicks on the JOIN link$")
+    @When("^I click on the JOIN link$")
     public void user_clicks_on_the_JOIN_link() throws Throwable {
         homePage.clickJoinLink();
     }
 
-    @When("^User entails valid details$")
+    @When("^I enter valid details$")
     public void user_entails_valid_details() throws Throwable {
-        registration.fillInEmail("Bobffafakeuitey@gmail.com");
+        registration.fillInEmail("Bobffaffakeey@gmail.com");
         registration.fillInFirstNameField("Migey");
         registration.fillInLastNameField("Fake");
         registration.fillInPasswordField("Password@1234");
@@ -56,118 +56,144 @@ public class RegistrationStepDefinitions {
         registration.clickMaleBtn();
     }
 
-    @When("^User clicks the JOIN ASOS button$")
+    @When("^I click the JOIN ASOS button$")
     public void user_clicks_the_JOIN_ASOS_button() throws Throwable {
         registration.clickRegisterBtn();
 
     }
 
-    @Then("^User is taken to ITEM BAG page$")
+    @Then("^I am taken to ITEM BAG page$")
     public void user_is_taken_to_ITEM_BAG_page() throws Throwable {
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "http://www.asos.com/bag?nlid=nav%20header" );
     }
 
-    @When("^User enters valid FirstName$")
-    public void user_enters_valid_FirstName() throws Throwable {
-        registration.fillInFirstNameField("Christian");
-
-    }
-
-    @When("^User enters valid LastName$")
-    public void user_enters_valid_LastName() throws Throwable {
-        registration.fillInLastNameField("Bryant");
-    }
-
-    @When("^User enters valid Password$")
-    public void user_enters_valid_Password() throws Throwable {
-        registration.fillInPasswordField("Password@1234");
-    }
-
-    @When("^User selects valid DOB$")
-    public void user_selects_valid_DOB() throws Throwable {
-        registration.setbDaySelect(1);
-        registration.setbMonthSelect(1);
-        registration.setbYearSelect(10);
-    }
-
-    @When("^User selects Gender$")
-    public void user_selects_Gender() throws Throwable {
-        registration.clickMaleBtn();
-    }
-
-    @Then("^User receive's no email error message$")
+    @Then("^I receive a no email error message$")
     public void user_receive_s_no_email_error_message() throws Throwable {
         assertEquals("Oops! You need to type your email here", registration.emailErrorMessage());
     }
 
-    @When("^User enters email in invalid format$")
+    @When("^I enter an email in invalid format$")
     public void user_enters_email_in_invalid_format() throws Throwable {
         registration.fillInEmail("Invalid");
     }
 
-    @Then("^User receive's invalid format email error message$")
+    @Then("^I receive an invalid format email error message$")
     public void user_receive_s_invalid_format_email_error_message() throws Throwable {
         assertEquals("Email fail! Please type in your correct email address", registration.emailErrorMessage());
     }
 
-    @When("^User enters email which has already been used$")
+    @When("^I enter an email which has already been used$")
     public void user_enters_email_which_has_already_been_used() throws Throwable {
         registration.fillInEmail("cbryant1993@gmail.com");
     }
 
-    @Then("^User receive's already registered email error message$")
+    @Then("^I receive an already registered email error message$")
     public void user_receive_s_already_registered_email_error_message() throws Throwable {
         assertEquals("The email address has already been allocated to another customer", registration.rEmailMessage());
     }
 
-    @When("^User enters email which is more than 100 characters$")
+    @When("^I enter an email which is more than 100 characters$")
     public void user_enters_email_which_is_more_than_characters() throws Throwable {
         registration.fillInEmail("sabusahbcusacbasucbsaucbsauhbcuasbcuahsbcuhasbcuahsbcuashbcuhasbcuhasbcuahsbcuhasbcuahsbcuahsbcuahsbcuhsab@hotmail.com");
     }
 
-    @Then("^User receive's email is too long email error message$")
+    @Then("^I receive an email is too long email error message$")
     public void user_receive_s_email_is_too_long_email_error_message() throws Throwable {
         Thread.sleep(4000);
         assertEquals("Name must not exceed 100 characters", registration.rEmailMessage());
     }
 
-    @Then("^User receive's no firstname error message$")
+    @Then("^I receive a no firstname error message$")
     public void user_receive_s_no_firstname_error_message() throws Throwable {
         assertEquals("We need your first name – it’s nicer that way", registration.noFirstNameErrorMessage());
     }
 
-    @Then("^User receive's no lastname error message$")
+    @Then("^I receive a no lastname error message$")
     public void user_receive_s_no_lastname_error_message() throws Throwable {
         assertEquals("Last name, too, please!", registration.noLastNameErrorMessage());
     }
 
-    @Then("^User receive's no password error message$")
+    @Then("^I receive a no password error message$")
     public void user_receive_s_no_password_error_message() throws Throwable {
         assertEquals("Hey, we need a password here", registration.noPasswordErrorMessage());
     }
 
-    @When("^User enters an invalid password$")
+    @When("^I enter an invalid password$")
     public void user_enters_an_invalid_password() throws Throwable {
         registration.fillInPasswordField("Pass");
     }
 
-    @Then("^User receive's invalid password error message$")
+    @Then("^I receive an invalid password error message$")
     public void user_receive_s_invalid_password_error_message() throws Throwable {
         assertEquals("At least 6 letters and 1 number, please!", registration.invalidPasswordErrorMessage());
     }
 
-    @When("^User selects invalid DOB$")
+    @When("^I select invalid DOB$")
     public void user_selects_invalid_DOB() throws Throwable {
         registration.setbDaySelect(6);
         registration.setbMonthSelect(6);
         registration.setbYearSelect(1);
     }
 
-    @Then("^User receive's invalid DOB error message$")
+    @Then("^I receive an invalid DOB error message$")
     public void user_receive_s_invalid_DOB_error_message() throws Throwable {
         assertEquals("Oops. Looks like you're too young to use ASOS.", registration.invalidDOBErrorMessage());
     }
+
+    @Given("^I enter all valid details except email$")
+    public void i_enter_all_valid_details_except_email() throws Throwable {
+        registration.fillInFirstNameField("Christian");
+        registration.fillInLastNameField("Fake");
+        registration.fillInPasswordField("Password@1234");
+        registration.setbDaySelect(1);
+        registration.setbMonthSelect(1);
+        registration.setbYearSelect(10);
+        registration.clickMaleBtn();
+    }
+
+    @Given("^I enter all valid details except Firstname$")
+    public void i_enter_all_valid_details_except_Firstname() throws Throwable {
+        registration.fillInEmail("Bobffafakeuitey@gmail.com");
+        registration.fillInLastNameField("Fake");
+        registration.fillInPasswordField("Password@1234");
+        registration.setbDaySelect(1);
+        registration.setbMonthSelect(1);
+        registration.setbYearSelect(10);
+        registration.clickMaleBtn();
+    }
+
+    @Given("^I enter all valid details except Lastname$")
+    public void i_enter_all_valid_details_except_Lastname() throws Throwable {
+        registration.fillInEmail("Bobffafakeuitey@gmail.com");
+        registration.fillInFirstNameField("Migey");
+        registration.fillInPasswordField("Password@1234");
+        registration.setbDaySelect(1);
+        registration.setbMonthSelect(1);
+        registration.setbYearSelect(10);
+        registration.clickMaleBtn();
+    }
+
+    @Given("^I enter all valid details except Password$")
+    public void i_enter_all_valid_details_except_Password() throws Throwable {
+        registration.fillInEmail("Bobffafakeuitey@gmail.com");
+        registration.fillInFirstNameField("Migey");
+        registration.fillInLastNameField("Fake");
+        registration.setbDaySelect(1);
+        registration.setbMonthSelect(1);
+        registration.setbYearSelect(10);
+        registration.clickMaleBtn();
+    }
+
+    @Given("^I enter all valid details except DOB$")
+    public void i_enter_all_valid_details_except_DOB() throws Throwable {
+        registration.fillInEmail("Bobffafakeuitey@gmail.com");
+        registration.fillInFirstNameField("Migey");
+        registration.fillInLastNameField("Fake");
+        registration.fillInPasswordField("Password@1234");
+        registration.clickMaleBtn();
+    }
+
 
 
 
