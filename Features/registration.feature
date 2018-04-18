@@ -12,11 +12,6 @@ Feature: ASOS register
     Given User is on the ASOS home page
     When User clicks on the account icon
     When User clicks on the JOIN link
-    And User enters valid FirstName
-    And User enters valid LastName
-    And User enters valid Password
-    And User selects valid DOB
-    And User selects Gender
     When User clicks the JOIN ASOS button
     Then User receive's no email error message
 
@@ -25,11 +20,6 @@ Feature: ASOS register
       When User clicks on the account icon
       When User clicks on the JOIN link
       And User enters email in invalid format
-      And User enters valid FirstName
-      And User enters valid LastName
-      And User enters valid Password
-      And User selects valid DOB
-      And User selects Gender
       When User clicks the JOIN ASOS button
       Then User receive's invalid format email error message
 
@@ -63,11 +53,6 @@ Feature: ASOS register
     Given User is on the ASOS home page
     When User clicks on the account icon
     When User clicks on the JOIN link
-    And User enters email which is more than 100 characters
-    And User enters valid LastName
-    And User enters valid Password
-    And User selects valid DOB
-    And User selects Gender
     When User clicks the JOIN ASOS button
     Then User receive's no firstname error message
 
@@ -75,10 +60,6 @@ Feature: ASOS register
     Given User is on the ASOS home page
     When User clicks on the account icon
     When User clicks on the JOIN link
-    And User enters email which is more than 100 characters
-    And User enters valid Password
-    And User selects valid DOB
-    And User selects Gender
     When User clicks the JOIN ASOS button
     Then User receive's no lastname error message
 
@@ -86,9 +67,6 @@ Feature: ASOS register
     Given User is on the ASOS home page
     When User clicks on the account icon
     When User clicks on the JOIN link
-    And User enters email which is more than 100 characters
-    And User selects valid DOB
-    And User selects Gender
     When User clicks the JOIN ASOS button
     Then User receive's no password error message
 
@@ -97,12 +75,7 @@ Feature: ASOS register
     Given User is on the ASOS home page
     When User clicks on the account icon
     When User clicks on the JOIN link
-    And User enters email which is more than 100 characters
-    And User enters valid FirstName
-    And User enters valid LastName
     And User enters an invalid password
-    And User selects valid DOB
-    And User selects Gender
     When User clicks the JOIN ASOS button
     Then User receive's invalid password error message
 
@@ -110,12 +83,7 @@ Feature: ASOS register
     Given User is on the ASOS home page
     When User clicks on the account icon
     When User clicks on the JOIN link
-    And User enters email which is more than 100 characters
-    And User enters valid FirstName
-    And User enters valid LastName
-    And User enters valid Password
     And User selects invalid DOB
-    And User selects Gender
     When User clicks the JOIN ASOS button
     Then User receive's invalid DOB error message
 

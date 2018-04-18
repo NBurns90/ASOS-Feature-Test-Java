@@ -46,7 +46,7 @@ public class RegistrationStepDefinitions {
 
     @When("^User entails valid details$")
     public void user_entails_valid_details() throws Throwable {
-        registration.fillInEmail("Bobfakejfakey@gmail.com");
+        registration.fillInEmail("Bobffafakeuitey@gmail.com");
         registration.fillInFirstNameField("Migey");
         registration.fillInLastNameField("Fake");
         registration.fillInPasswordField("Password@1234");
