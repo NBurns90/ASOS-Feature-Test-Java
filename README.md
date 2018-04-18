@@ -24,8 +24,8 @@ The purpose of this project will be to test the Login/Registration features of A
 ```java
     @When("^I enter valid details$")
     public void i_enter_valid_details() throws Throwable {
-        registration.fillInEmail("Bobffffakemcfakerake32y@gmail.com"); <<<<<<<<<<<<<< Here
-        registration.fillInFirstNameField("Migey");
+        registration.fillInEmail("fakeemail@fake.com");
+        registration.fillInFirstNameField("Mikey");
         registration.fillInLastNameField("Fake");
         registration.fillInPasswordField("Password@1234");
         registration.setbDaySelect(1);
